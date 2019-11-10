@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Drums Factory</title>
+    <meta name="author" content="tempload" />
+    <link rel="icon" type="image/png" href="assets/img/fav.png">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="assets/plugins/typed/lib/typed.min.js"></script>
+  </head>
+
+<body>
+<style>
+    body{
+       background-image: url("https://wallpaperaccess.com/full/268724.jpg");
+        background-position:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    p{
+
+        color:white;
+        margin-top:75px;
+        font-size: 73px;
+        z-index: 100;
+        margin-left: 30%;
+        
+       
+}
+
+    
+    </style>
+  <header>
+    <div class="container">
+      <nav class="navbar fixed-top navbar-dark bg-dark">
+      <a href="index.html"><img class="logo" src="assets/img/logo-mid.png" alt=""> </a>
+
+        <ul>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="live.html">Live</a></li>
+          <li><a href="forum.html">forum</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<p class="text-justify">Live drummer zone</p>
+
+    <div class="livezone">
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 1250,
+        height: 510,
+        channel: "cobaek",
+        layout: "video",
+        autoplay: true
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+
+    </div>
+  </body>
+</html>
